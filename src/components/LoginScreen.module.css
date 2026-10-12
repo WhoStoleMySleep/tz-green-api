@@ -1,0 +1,108 @@
+.screen {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: 24px 16px;
+  background:
+    radial-gradient(circle at 15% 10%, rgb(122 92 255 / 18%), transparent 45%),
+    radial-gradient(circle at 85% 90%, rgb(25 196 255 / 16%), transparent 45%), var(--color-bg);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px 28px;
+  background: var(--color-surface);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  background: var(--brand-gradient);
+  border-radius: 18px;
+}
+
+.title {
+  margin: 4px 0 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 6px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.subtitle a {
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.field input {
+  height: 44px;
+  padding: 0 14px;
+  font-size: 15px;
+  color: var(--color-text);
+  background: var(--color-surface-hover);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.advanced summary {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.error {
+  padding: 10px 12px;
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-danger);
+  background: rgb(229 72 77 / 10%);
+  border-radius: var(--radius-control);
+}
+
+.submit {
+  height: 46px;
+  margin-top: 4px;
+  font-weight: 600;
+  color: var(--color-accent-contrast);
+  background: var(--color-accent);
+  border: 0;
+  border-radius: var(--radius-control);
+  transition: background 0.15s;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
+.submit:disabled {
+  opacity: 0.55;
+}

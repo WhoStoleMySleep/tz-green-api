@@ -1,0 +1,28 @@
+.scroller {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  padding: 16px 0;
+  overflow-y: auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  max-width: 820px;
+  padding: 0 16px;
+  margin: auto auto 0;
+  list-style: none;
+}
+
+.empty {
+  padding: 8px 14px;
+  margin: auto;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  border-radius: 14px;
+}

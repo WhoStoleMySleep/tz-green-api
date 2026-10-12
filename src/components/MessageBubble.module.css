@@ -1,0 +1,54 @@
+.row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.row[data-direction="outgoing"] {
+  justify-content: flex-end;
+}
+
+.bubble {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  align-items: flex-end;
+  max-width: min(75%, 560px);
+  padding: 7px 12px 6px;
+  background: var(--color-bubble-in);
+  border-radius: var(--radius-bubble);
+  border-bottom-left-radius: 6px;
+  box-shadow: var(--shadow-bubble);
+}
+
+.row[data-direction="outgoing"] .bubble {
+  background: var(--color-bubble-out);
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: var(--radius-bubble);
+}
+
+.text {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.meta {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--color-bubble-meta);
+}
+
+.status {
+  display: inline-flex;
+}
+
+.bubble[data-status="sent"] .status {
+  color: var(--color-accent);
+}
+
+.bubble[data-status="failed"] .meta {
+  color: var(--color-danger);
+}

@@ -1,0 +1,61 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+}
+
+.header {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 14px 12px 10px 20px;
+}
+
+.title {
+  flex: 1;
+  margin: 0;
+  font-size: 22px;
+}
+
+.iconButton {
+  display: inline-flex;
+  padding: 8px;
+  color: var(--color-text-secondary);
+  background: none;
+  border: 0;
+  border-radius: 10px;
+  transition:
+    background 0.12s,
+    color 0.12s;
+}
+
+.iconButton:hover {
+  color: var(--color-accent);
+  background: var(--color-surface-hover);
+}
+
+.offline {
+  padding: 8px 12px;
+  margin: 0 12px 8px;
+  font-size: 13px;
+  color: var(--color-danger);
+  background: rgb(229 72 77 / 10%);
+  border-radius: 10px;
+}
+
+.list {
+  flex: 1;
+  padding: 0 8px 8px;
+  margin: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.empty {
+  margin: 24px 20px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
